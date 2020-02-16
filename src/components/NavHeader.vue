@@ -121,24 +121,22 @@
   </div>
 </template>
 <script>
-// import { mapState } from "vuex";
+import { mapState } from "vuex";
 export default {
   name: "nav-header",
   data() {
     return {
-      username: "",
-      cartCount: 0,
       phoneList: [],
     };
   },
   computed: {
-    /*username(){
-        return this.$store.state.username;
-      },
-      cartCount(){
-        return this.$store.state.cartCount;
-      }*/
-    // ...mapState(["username", "cartCount"]),
+    // username() {
+    //   return this.$store.state.username;
+    // },
+    // cartCount() {
+    //   return this.$store.state.cartCount;
+    // },
+    ...mapState(["username", "cartCount"]),
   },
   filters: {
     currency(val) {
